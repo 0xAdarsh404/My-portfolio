@@ -1,0 +1,454 @@
+.skills-section {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: visible;
+}
+
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(0, 123, 255, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(220, 53, 69, 0.05) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.skill-category-card {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.skill-category-card.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--shadow);
+}
+
+.skill-category-header {
+  background: var(--bg-primary);
+  border-bottom: 2px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.category-icon {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.skill-category-card:hover .category-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.category-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.skill-item {
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateX(5px);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.2);
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-percentage {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.skill-progress {
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.custom-progress {
+  height: 100%;
+  background: transparent;
+}
+
+.custom-progress .progress-bar {
+  background: var(--progress-color, var(--primary-color));
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-progress .progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.core-knowledge-card {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.core-knowledge-card.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.core-knowledge-card .card-header {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  border-bottom: 2px solid var(--border-color);
+  padding: 1.5rem;
+}
+
+.core-knowledge-card h4 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.knowledge-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-primary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.knowledge-item.animate-knowledge {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.knowledge-item:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.knowledge-item:hover .knowledge-bullet {
+  background: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.knowledge-bullet {
+  width: 12px;
+  height: 12px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.knowledge-item span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.knowledge-item:hover span {
+  color: white;
+}
+
+/* Animation Classes */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .knowledge-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    min-height: auto;
+    overflow: visible;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* Ensure visibility on tablets */
+  .skill-category-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .core-knowledge-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .skill-category-header {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .category-icon {
+    font-size: 1.8rem;
+  }
+  
+  .category-title {
+    font-size: 1.2rem;
+  }
+  
+  .skill-info {
+    gap: 0.5rem;
+  }
+  
+  .skill-icon {
+    font-size: 1.3rem;
+  }
+  
+  .skill-name {
+    font-size: 0.95rem;
+  }
+  
+  .knowledge-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .knowledge-item {
+    padding: 0.75rem;
+  }
+  
+  .skill-category-card {
+    margin-bottom: 1.5rem;
+    min-height: auto;
+  }
+  
+  .core-knowledge-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-section {
+    padding: 2rem 0 !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Skills container fixes */
+  .skills-container {
+    overflow: visible !important;
+    padding: 0 1rem !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Force visibility on mobile */
+  .skill-category-card, .skill-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    animation: none !important;
+    visibility: visible !important;
+    display: block !important;
+    overflow: visible !important;
+    margin-bottom: 1.5rem !important;
+    padding: 1rem !important;
+    height: auto !important;
+    max-height: none !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  .core-knowledge-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    animation: none !important;
+    visibility: visible !important;
+    display: block !important;
+    overflow: visible !important;
+    margin-bottom: 2rem !important;
+    padding: 1rem !important;
+  }
+  
+  .knowledge-item {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    animation: none !important;
+    visibility: visible !important;
+    display: flex !important;
+    overflow: visible !important;
+    flex-wrap: wrap !important;
+    word-wrap: break-word !important;
+  }
+  
+  /* Text wrapping fixes */
+  .skill-name, .category-title {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Ensure React Bootstrap components are visible */
+  .card {
+    display: block !important;
+    visibility: visible !important;
+    overflow: visible !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .container {
+    display: block !important;
+    visibility: visible !important;
+    overflow: visible !important;
+    padding: 0 1rem !important;
+  }
+  
+  .row {
+    display: flex !important;
+    visibility: visible !important;
+    flex-wrap: wrap !important;
+    margin: 0 !important;
+  }
+  
+  .col-lg-6, .col-lg-12 {
+    display: block !important;
+    visibility: visible !important;
+    padding: 0.5rem !important;
+    flex: 1 0 100% !important;
+  }
+  
+  .skill-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .skill-info {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+  
+  .skill-percentage {
+    align-self: flex-end !important;
+  }
+  
+  .core-knowledge-card .card-header {
+    padding: 1rem !important;
+    overflow: visible !important;
+  }
+  
+  .core-knowledge-card h4 {
+    font-size: 1.1rem !important;
+    word-wrap: break-word !important;
+  }
+  
+  .skill-category-card {
+    margin-bottom: 1.5rem !important;
+    height: auto !important;
+  }
+  
+  .knowledge-grid {
+    padding: 0.5rem 0 !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .skill-category-header {
+    padding: 1rem !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+    overflow: visible !important;
+  }
+}
