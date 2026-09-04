@@ -13,11 +13,24 @@
 }
 
 .brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--primary-color) !important;
   transition: all 0.3s ease;
+}
+
+.brand-photo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--primary-color);
+  flex-shrink: 0;
 }
 
 .brand-logo:hover {
@@ -122,6 +135,11 @@
 @media (max-width: 576px) {
   .brand-logo {
     font-size: 1.1rem;
+  }
+
+  .brand-photo {
+    width: 30px;
+    height: 30px;
   }
   
   .custom-navbar {

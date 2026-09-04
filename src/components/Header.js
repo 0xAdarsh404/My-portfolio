@@ -41,6 +41,11 @@ const Header = () => {
             scrollToSection('home');
           }}
         >
+          <img
+            src={`${process.env.PUBLIC_URL}/profile.jpg`}
+            alt="Adarsh Pratap Singh"
+            className="brand-photo"
+          />
           <span className="brand-text">Adarsh</span>
         </Navbar.Brand>
         

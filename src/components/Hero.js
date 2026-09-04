@@ -51,6 +51,11 @@ const Hero = () => {
         <Row className="align-items-center min-vh-100">
           <Col lg={8} md={10} className="mx-auto text-center">
             <div className="hero-content fade-in-up">
+              <img
+                src={`${process.env.PUBLIC_URL}/profile.jpg`}
+                alt="Adarsh Pratap Singh"
+                className="hero-photo"
+              />
               <div className="greeting-text mb-3">
                 <span className="wave">👋</span> Hi I am
               </div>
