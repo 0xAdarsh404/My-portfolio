@@ -71,8 +71,8 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       title: 'Email',
-      value: 'adarshsingh53152@gmail.com',
-      link: 'mailto:adarshsingh53152@gmail.com'
+      value: 'adarshpratapsingh.dev@gmail.com',
+      link: 'mailto:adarshpratapsingh.dev@gmail.com'
     },
     {
       icon: FaMapMarkerAlt,
