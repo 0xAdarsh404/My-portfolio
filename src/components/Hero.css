@@ -133,11 +133,30 @@
   gap: 0.5rem;
   color: var(--text-secondary);
   font-size: 0.95rem;
+  max-width: 100%;
 }
 
 .contact-icon {
   color: var(--primary-color);
   font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-item span {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.hero-email {
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero-email:hover {
+  color: var(--primary-color);
+  transform: scale(1.06);
 }
 
 .hero-buttons {

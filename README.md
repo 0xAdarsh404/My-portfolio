@@ -65,6 +65,6 @@ MIT License - feel free to use this as a template for your own portfolio!
 
 ## 📞 Contact
 
-- **Email**: adarshsingh53152@gmail.com
+- **Email**: adarshpratapsingh.dev@gmail.com
 - **LinkedIn**: [Adarsh Pratap Singh](https://www.linkedin.com/in/adarsh-pratap-singh-274a73296/)
 - **GitHub**: [0xAdarsh404](https://github.com/0xAdarsh404)

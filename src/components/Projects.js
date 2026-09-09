@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
-import { FaGithub, FaExternalLinkAlt, FaCode, FaShieldAlt, FaCog, FaCalendarAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaCode, FaShieldAlt, FaCog, FaCalendarAlt, FaLaptopCode } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
@@ -97,6 +97,25 @@ const Projects = () => {
       ],
       github: "#",
       demo: "#"
+    },
+    {
+      id: 4,
+      title: "Krishna International School",
+      description: "Designed and developed a production-ready school website as a freelance project. Focused on clear information architecture, mobile-first layout, and a fast, modern UI for parents and visitors.",
+      technologies: ["React.js", "Tailwind CSS", "Vercel"],
+      category: "web",
+      icon: <FaCode />,
+      year: "2026",
+      status: "Completed",
+      features: [
+        "Mobile-first responsive layout",
+        "School info, gallery & contact sections",
+        "Clean modern UI for parents & visitors",
+        "Fast deployment on Vercel",
+        "End-to-end client delivery"
+      ],
+      github: "https://github.com/0xAdarsh404/assignment-project",
+      demo: "https://assignment-project-gilt-seven.vercel.app/"
     }
   ];
 
@@ -234,8 +253,38 @@ const Projects = () => {
         </Row>
         
         <Row className="mb-5">
-          <Col lg={12}>
+          <Col lg={12} className="mb-4">
             <Card className={`experience-card custom-card ${isVisible ? 'fade-in-up' : ''}`}>
+              <Card.Header className="experience-header">
+                <div className="experience-icon">
+                  <FaLaptopCode />
+                </div>
+                <div className="experience-info">
+                  <h4 className="job-title">Freelance Web Developer</h4>
+                  <h5 className="company-name">Independent · Remote</h5>
+                  <div className="experience-meta">
+                    <span className="experience-duration">
+                      <FaCalendarAlt className="me-2" />
+                      2025 – Present
+                    </span>
+                    <Badge bg="success" className="experience-status">
+                      Active
+                    </Badge>
+                  </div>
+                </div>
+              </Card.Header>
+              <Card.Body>
+                <ul className="experience-list">
+                  <li>Built and launched a production website for Krishna International School using React.js and Tailwind CSS, with a mobile-first layout tailored for parents and visitors.</li>
+                  <li>Owned the full freelance lifecycle — client requirements, UI decisions, responsive development, Vercel deployment, and post-launch refinements.</li>
+                  <li>Delivered a clean, fast, and easy-to-navigate school site as an independent developer, handling communication, timelines, and final handoff.</li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col lg={12}>
+            <Card className={`experience-card custom-card ${isVisible ? 'fade-in-up' : ''}`} style={{ animationDelay: '0.15s' }}>
               <Card.Header className="experience-header">
                 <div className="experience-icon">
                   <FaShieldAlt />
@@ -246,10 +295,10 @@ const Projects = () => {
                   <div className="experience-meta">
                     <span className="experience-duration">
                       <FaCalendarAlt className="me-2" />
-                      Jul 2026 – Present
+                      Jul 2026 – Aug 2026
                     </span>
-                    <Badge bg="primary" className="experience-status">
-                      Current
+                    <Badge bg="secondary" className="experience-status">
+                      Completed
                     </Badge>
                   </div>
                 </div>

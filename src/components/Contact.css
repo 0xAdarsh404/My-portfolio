@@ -103,6 +103,7 @@
   opacity: 0;
   transform: translateX(-20px);
   transition: all 0.3s ease;
+  gap: 0;
 }
 
 .contact-item.animate-item {
@@ -123,6 +124,7 @@
 .contact-icon {
   width: 50px;
   height: 50px;
+  min-width: 50px;
   background: linear-gradient(135deg, var(--primary-color), var(--success-color, #28a745));
   border-radius: 50%;
   display: flex;
@@ -131,6 +133,7 @@
   color: white;
   font-size: 1.2rem;
   margin-right: 1rem;
+  flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
@@ -140,6 +143,7 @@
 
 .contact-details {
   flex: 1;
+  min-width: 0;
 }
 
 .contact-label {
@@ -152,15 +156,35 @@
 }
 
 .contact-value {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-primary);
   text-decoration: none;
   transition: all 0.3s ease;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.contact-value.contact-email {
+  font-size: 0.78rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .contact-value:hover {
   color: var(--primary-color);
+}
+
+.contact-value.contact-email:hover {
+  transform: scale(1.06);
+  white-space: normal;
+  overflow: visible;
 }
 
 /* Social Section */
@@ -523,15 +547,16 @@
   }
   
   .contact-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 0;
     margin-bottom: 1rem;
   }
   
   .contact-icon {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
   }
   
   .social-links {

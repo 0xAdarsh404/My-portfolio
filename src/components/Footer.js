@@ -28,7 +28,7 @@ const Footer = () => {
     },
     {
       icon: FaEnvelope,
-      url: 'mailto:adarshsingh53152@gmail.com',
+      url: 'mailto:adarshpratapsingh.dev@gmail.com',
       name: 'Email',
       color: '#ea4335'
     }
@@ -119,8 +119,8 @@ const Footer = () => {
               <div className="contact-info">
                 <p className="contact-item">
                   <FaEnvelope className="contact-icon" />
-                  <a href="mailto:adarshsingh53152@gmail.com" className="contact-link">
-                    adarshsingh53152@gmail.com
+                  <a href="mailto:adarshpratapsingh.dev@gmail.com" className="contact-link contact-email">
+                    adarshpratapsingh.dev@gmail.com
                   </a>
                 </p>
                 <p className="contact-item">

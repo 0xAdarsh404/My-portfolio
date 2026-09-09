@@ -210,22 +210,42 @@
   align-items: center;
   margin-bottom: 1rem;
   font-size: 0.95rem;
+  gap: 0;
 }
 
 .contact-icon {
   color: var(--primary-color);
   margin-right: 0.75rem;
   font-size: 1rem;
+  flex-shrink: 0;
 }
 
 .contact-link {
   color: var(--text-secondary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.contact-link.contact-email {
+  font-size: 0.78rem;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-link:hover {
   color: var(--primary-color);
+}
+
+.contact-link.contact-email:hover {
+  transform: scale(1.06);
+  white-space: normal;
+  overflow: visible;
 }
 
 .contact-text {

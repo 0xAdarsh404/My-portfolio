@@ -80,7 +80,7 @@ const Hero = () => {
                 </div>
                 <div className="contact-item">
                   <FaEnvelope className="contact-icon" />
-                  <span>adarshsingh53152@gmail.com</span>
+                  <span className="hero-email">adarshpratapsingh.dev@gmail.com</span>
                 </div>
                 <div className="contact-item">
                   <FaMapMarkerAlt className="contact-icon" />
@@ -123,7 +123,7 @@ const Hero = () => {
                   <FaGithub />
                 </a>
                 <a 
-                  href="mailto:adarshsingh53152@gmail.com"
+                  href="mailto:adarshpratapsingh.dev@gmail.com"
                   className="social-link"
                   aria-label="Email"
                 >

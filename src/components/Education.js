@@ -58,7 +58,7 @@ const Education = () => {
     },
     {
       degree: "Bachelor of Computer Applications (BCA)",
-      institution: "Prof. Rajendra Singh (Rajju Bhaiya) University",
+      institution: "Allahabad State University",
       location: "Prayagraj",
       duration: "2023 – 2026",
       status: "Completed",

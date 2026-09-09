@@ -140,7 +140,10 @@ const Contact = () => {
                           <div className="contact-details">
                             <h6 className="contact-label">{item.title}</h6>
                             {item.link ? (
-                              <a href={item.link} className="contact-value">
+                              <a
+                                href={item.link}
+                                className={`contact-value${item.title === 'Email' ? ' contact-email' : ''}`}
+                              >
                                 {item.value}
                               </a>
                             ) : (
@@ -299,7 +302,7 @@ const Contact = () => {
                     <Button 
                       variant="primary" 
                       size="lg" 
-                      href="mailto:adarshsingh53152@gmail.com"
+                      href="mailto:adarshpratapsingh.dev@gmail.com"
                       className="cta-btn me-3 mb-2"
                     >
                       <FaEnvelope className="me-2" />
